@@ -50,6 +50,8 @@ export default defineConfig({
   build: {
     chunkSizeWarningLimit: 2048,
   },
+    // 静态资源基础路径 base: './' || '',
+  base: process.env.NODE_ENV === 'production' ? './' : '/',
     // css的處理
   css: {
     devSourcemap: true,
