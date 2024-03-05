@@ -3,7 +3,8 @@ import { createRouter, createWebHistory, createWebHashHistory } from "vue-router
 const router = createRouter({
   // createWebHistory應該是較適用於平面網站 應用於SSR SEO優化 傳統瀏覽器瀏覽
   // history: createWebHistory(import.meta.env.BASE_URL),
-  history: createWebHashHistory(),
+  // history: createWebHashHistory(),
+    history: createWebHashHistory('/'),
   routes: [
 
     //  { path: '/', component: () => import('@/views/Home.vue') },
