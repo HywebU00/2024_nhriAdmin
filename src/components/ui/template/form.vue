@@ -8,6 +8,7 @@
   <!-- END page-header -->
 
   <!-- 組合型表單 start -->
+  <small class="text-primary">檔案更新 > 需更新 src/scss資料夾 及 src/plugins 檔案 </small>
   <panel>
     <panel-header>
       <panel-title>組合型表單</panel-title>

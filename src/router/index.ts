@@ -6,7 +6,7 @@ const router = createRouter({
   history: createWebHashHistory(),
   routes: [
 
-    // { path: '/', component: () => import('@/views/Home.vue') },
+    //  { path: '/', component: () => import('@/views/Home.vue') },
     { path: '/t01', component: () => import('@/test/t01.vue'), name: '測試頁01', meta: { parentPathName: 'Home ／ Email1 ／ ' } },
     { path: '/t02', component: () => import('@/test/t02.vue'), name: '測試頁02', meta: { parentPathName: 'Home / Email2 / ' } },
 
@@ -26,7 +26,7 @@ const router = createRouter({
          { path: '/' ,  name: 'UI介面',component: () => import('@/components/ui/template/form.vue') },
         
           { path: '/ui/template/tree', name: '樹狀圖'  ,meta: { parentPathName: '首頁 / UI介面 / ' } ,component: () => import('@/components/ui/template/tree.vue') },
-          { path: '/ui/template/form', component: () => import('@/components/ui/template/form.vue') },
+          { path: '/ui/template/form',name: '表單模板',meta: { parentPathName: '首頁 / UI介面 / ' } , component: () => import('@/components/ui/template/form.vue') },
 
   ],
 });

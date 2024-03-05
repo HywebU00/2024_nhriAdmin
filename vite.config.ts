@@ -47,6 +47,9 @@ export default defineConfig({
       },
     },
   },
+  build: {
+    chunkSizeWarningLimit: 2048,
+  },
     // css的處理
   css: {
     devSourcemap: true,
