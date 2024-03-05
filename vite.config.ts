@@ -51,7 +51,7 @@ export default defineConfig({
     chunkSizeWarningLimit: 2048,
   },
     // 静态资源基础路径 base: './' || '',
-  // base: "./",
+  base: "./",
     // css的處理
   css: {
     devSourcemap: true,
