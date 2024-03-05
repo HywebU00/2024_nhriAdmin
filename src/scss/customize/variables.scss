@@ -1,0 +1,38 @@
+// src/sass/variables.scss
+
+// Globals
+$border-radius-root: 6px;
+$font-size-root: 16px;
+$remFontSize: 16;
+
+$gray: #e9ecef;
+// $grayLight: #ececec;
+$gray3: #828282;
+$gray2: #4b4b4b;
+
+$dark: rgba(0, 0, 0, 0.87);
+
+//背景色
+$backgroundColor: $gray;
+$boxShadow: rgba(51, 64, 76, 0.2) 0px 8px 24px;
+
+//mediaquery
+$screen-xxl: 2560; //1400px
+$screen-xl: 1920; //1400px
+$screen-lg: 1280; //電腦
+$screen-md-max: 960px; //992px !default; //平板
+$screen-sm-max: 600px; //768px !default; //手機
+$screen-xs-max: 576px !default; //極小尺寸 - hyui
+$screen-xs-mobile-max: 320px !default; //極小尺寸 - flex
+
+$boxShadow:
+  rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
+  rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+
+// 字型設定
+$fontFamily: 'Noto Sans', 'Noto Sans TC', Lato, 'PingFang TC', 'Helvetica Neue', Helvetica, 微軟正黑體, Arial, sans-serif;
+
+$fontSize: 1em;
+$text-shadow: #000000a1 0.1em 0.1em 0.2em;
+// rem基本尺寸
+$remFontSize: 16;

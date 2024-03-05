@@ -1,0 +1,32 @@
+.formGrp {
+  label {
+    font-weight: 500;
+    margin: 0 0.5rem;
+  }
+  .label {
+    display: flex;
+    justify-content: flex-end;
+    label {
+      margin-top: 8px;
+      font-size: 1rem;
+    }
+
+    @media screen and (max-width: 1280px) {
+      justify-content: flex-start;
+      padding-bottom: 0;
+    }
+  }
+  .checkbox {
+    .v-label {
+      margin-left: -0.25rem;
+    }
+  }
+}
+label .necessary {
+  color: red;
+  text-decoration: none !important;
+}
+
+input:-internal-autofill-selected {
+  background: #fff !important;
+}

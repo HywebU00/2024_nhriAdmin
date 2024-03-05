@@ -1,0 +1,21 @@
+// table {
+//   thead {
+//     white-space: nowrap;
+//   }
+// }
+
+.tableInfo {
+  margin: 0 1rem 2rem 1rem;
+  .thead {
+    padding: 12px 1rem;
+    // display: flex;
+    // justify-content: flex-end;
+    // align-items: center;
+  }
+}
+.planInfo {
+  margin: 0 1rem 2rem 1rem;
+  .thead {
+    padding: 12px 1rem;
+  }
+}

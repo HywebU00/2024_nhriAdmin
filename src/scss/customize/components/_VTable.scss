@@ -1,0 +1,11 @@
+.v-table--density-default > .v-table__wrapper > table > tbody > tr > th,
+.v-table--density-default > .v-table__wrapper > table > thead > tr > th,
+.v-table--density-default > .v-table__wrapper > table > tfoot > tr > th {
+  height: 2.5rem; //calc(var(--v-table-header-height) + 0px);
+}
+.v-field--variant-outlined {
+  background: #f3f3f3b4;
+}
+.v-messages__message {
+  font-size: 0.75rem;
+}
