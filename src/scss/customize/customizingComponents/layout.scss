@@ -1,0 +1,86 @@
+* {
+  font-size: 1rem;
+}
+.menu-text {
+  font-size: 14px;
+}
+.v-btn--size-small {
+  .v-btn__content {
+    font-size: 14px;
+  }
+}
+.page-header {
+  font-weight: bold;
+}
+.cardDialog {
+  padding: 1rem;
+  h4 {
+    font-size: 20px;
+  }
+  .v-card-subtitle {
+    opacity: unset;
+  }
+  .tabBtn {
+    margin: 0.5rem 0 1rem 0;
+    border-right: 0;
+    border-left: 0;
+    button {
+      background: #fff;
+      border-radius: 0.25rem;
+      border: 1px solid #fff;
+      margin: 0 0.2rem;
+      color: #6c7582;
+      &:after {
+        border: none;
+      }
+      &:hover {
+        color: #333;
+        // border: 1px solid mix(#0156a2, #fff, 70%);
+        // color: #fff;
+      }
+    }
+    .v-tab--selected {
+      background-color: #0156a2;
+      color: #fff;
+      border: 1px solid #0156a2;
+      &:hover {
+        color: #fff;
+        .v-btn__content {
+          color: #fff;
+        }
+      }
+      .v-btn__content {
+        color: #fff;
+        border: 0px;
+        &::after {
+          border: 0px;
+        }
+        text-shadow: unset;
+      }
+    }
+    .v-tabs {
+      border-radius: 0px;
+    }
+    .v-tab__slider {
+      display: none;
+    }
+    .v-btn__content {
+      .form-label {
+        display: block;
+      }
+    }
+  }
+  .closeBtn {
+    box-shadow: none;
+    svg {
+      font-size: 1.5rem !important;
+    }
+  }
+}
+.selectInfo {
+  border-radius: 0.25rem;
+  background-color: #e8e8e8;
+  .v-input {
+    background-color: #fff;
+  }
+}

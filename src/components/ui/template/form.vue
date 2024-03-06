@@ -202,7 +202,17 @@
               <v-text-field variant="outlined" single-line label="密碼表單" :append-inner-icon="visible ? 'fa-solid fa-eye' : 'fa-solid fa-eye-slash'" :type="visible ? 'text' : 'password'" density="compact" :messages="['說明文字']" @click:append-inner="visible = !visible"></v-text-field>
             </v-col>
           </v-row>
-
+          <v-row class="formGrp">
+            <v-col class="label" cols="12" lg="2">
+              <label for="">單選 </label>
+            </v-col>
+            <v-col>
+              <v-radio-group inline color="secondary" hide-details="auto">
+                <v-radio label="是" value="true"></v-radio>
+                <v-radio label="否" value="false"></v-radio>
+              </v-radio-group>
+            </v-col>
+          </v-row>
           <v-row class="formGrp">
             <v-col class="label" cols="12" lg="2">
               <label class="" for="">兩欄欄位</label>
@@ -210,6 +220,16 @@
             <v-col class="d-flex">
               <v-text-field variant="outlined" label="文字標準表單" single-line hide-details="auto" :messages="['文字標準表單']" density="compact"></v-text-field>
               <v-checkbox class="checkbox" label="同會員資訊" hide-details="auto"></v-checkbox>
+            </v-col>
+          </v-row>
+          <v-row class="formGrp">
+            <v-col cols="12" md="2" class="">
+              <label class="label" for="list"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">* </abbr>多選選單</label>
+            </v-col>
+            <v-col class="checkGrp" id="list">
+              <v-checkbox density="compact" error-messages="" label="中文"></v-checkbox>
+              <v-checkbox density="compact" error-messages="" label="英文"></v-checkbox>
+              <v-checkbox density="compact" error-messages="" label="日文"></v-checkbox>
             </v-col>
           </v-row>
           <v-row class="formGrp">
@@ -279,29 +299,13 @@
     </panel-body>
   </panel>
   <!-- 組合型表單 end -->
+
   <panel>
     <panel-header>
       <panel-title>查詢欄位</panel-title>
       <panel-toolbar />
     </panel-header>
     <panel-body>
-      <v-row dense>
-        <label class="col-md-2 form-label text-center mb-5 label">計畫年度</label>
-        <v-col md="4"><v-text-field variant="outlined" density="compact"></v-text-field></v-col>
-        <label class="col-md-2 form-label text-center mb-5">計畫類別</label>
-        <v-col md="4"><v-text-field variant="outlined" density="compact"></v-text-field></v-col>
-        <label class="col-md-2 form-label text-center mb-5">計畫編號</label>
-        <v-col md="4">
-          <v-autocomplete variant="outlined" :items="$globalModels.getModel('fakeUnitArray')" density="compact"></v-autocomplete>
-        </v-col>
-        <label class="col-md-2 form-label text-center mb-5">計畫名稱</label>
-        <v-col md="4">
-          <v-autocomplete variant="outlined" :items="$globalModels.getModel('fakeUnitArray')" density="compact"></v-autocomplete>
-        </v-col>
-        <v-col class="text-center" cols="6" offset-md="6">
-          <v-btn class="mb-5" color="primary" variant="elevated" size="small">查詢</v-btn>
-        </v-col>
-      </v-row>
       <!-- 計畫列表 start -->
       <v-row class="tableInfo">
         <v-col cols="2" class="text-right bg-thead thead"> <label class="form-label"> 計畫年度 </label></v-col>
@@ -355,7 +359,6 @@
         </v-col>
       </v-row>
       <!-- 計畫列表 end -->
-
       <v-row class="planInfo">
         <v-col cols="12" class="text-center bg-thead thead">
           <label class="form-label"> <abbr class="necessary" title="為必填(選)欄位,不能為空白。">* </abbr>中文計畫內容 </label></v-col
@@ -383,65 +386,6 @@
           <v-card-text></v-card-text>
         </v-col>
       </v-row>
-    </panel-body>
-  </panel>
-  <panel>
-    <panel-header>
-      <panel-title>查詢結果 </panel-title>
-      <panel-toolbar />
-    </panel-header>
-    <panel-body>
-      <v-data-table
-        :headers="headers"
-        :items="tableData"
-        :loading="loading"
-        :footer-props="{ itemsPerPageText: '每頁筆數' }"
-        no-data-text="無資料"
-        loading-text="資料傳輸中"
-        :items-length="totalItems"
-        items-per-page-text="每頁筆數"
-        :items-per-page-options="itemsPerPageArray"
-        item-value="uuid"
-        v-model:items-per-page="itemsPerPage"
-        multi-sort
-        @update:options="getTableDataFormServer"
-      >
-        <!-- <template v-slot:headers="{ columns, isSorted, getSortIcon, toggleSort }">
-                    <tr>
-                        <template v-for="column in columns" :key="column.key">
-                            <td>
-                                <span class="mr-2 cursor-pointer" @click="() => toggleSort(column)">{{ column.title
-                                }}</span>
-                                <template v-if="isSorted(column)">
-                                    <v-icon :icon="getSortIcon(column)"></v-icon>
-                                </template>
-                                <v-icon v-if="column.removable" icon="$close" @click="() => remove(column.key)"></v-icon>
-                            </td>
-                        </template>
-                    </tr>
-                </template> -->
-        <template v-slot:item.index="{ item, index }">
-          {{ index + 1 }}
-        </template>
-        <template v-slot:item.planName="{ item }">
-          <a
-            href="javascript:void(0)"
-            style="color: black"
-            @click="
-              selectedData = item;
-              dialog1 = true;
-            "
-          >
-            {{ item.planName }}</a
-          >
-        </template>
-
-        <template v-slot:[`item.roleName`]="{ item }">
-          <tr v-for="(role, index) in item.roleName" :key="index">
-            <td>{{ role }}</td>
-          </tr>
-        </template>
-      </v-data-table>
     </panel-body>
   </panel>
 </template>
