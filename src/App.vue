@@ -32,11 +32,11 @@ appSidebarMenu.addMenuSystem();
 
 console.log('apiToken', appApiData.apiToken);
 
-if (!appApiData.apiToken) {
-  router.push({ path: '/auth/signin' });
+// if (!appApiData.apiToken) {
+//   router.push({ path: '/auth/signin' });
 
-  // appApiData.getToken();
-}
+//   // appApiData.getToken();
+// }
 
 onMounted(() => {
   //不能放這 父節點打不開
