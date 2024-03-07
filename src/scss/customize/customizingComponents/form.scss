@@ -3,11 +3,17 @@
     font-weight: 500;
     margin: 0 0.5rem;
   }
+  &:has(.v-messages) {
+    .label {
+      line-height: 40px;
+      align-items: flex-start;
+    }
+  }
   .label {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     label {
-      margin-top: 8px;
       font-size: 1rem;
     }
 
@@ -15,6 +21,10 @@
       justify-content: flex-start;
       padding-bottom: 0;
       padding-top: 0;
+      label {
+        line-height: 1rem;
+        margin-top: 8px;
+      }
     }
   }
   .checkbox {

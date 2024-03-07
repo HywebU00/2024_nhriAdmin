@@ -31,39 +31,39 @@
           </div>
         </panel-header>
         <panel-body>
-          <v-container>
+          <v-container class="tableInfo">
             <v-row>
-              <v-col cols="3" class="text-right bg-thead"> <label class="form-label"> 上層單位 </label></v-col>
+              <v-col cols="3" class="text-right bg-thead thead"> <label class="form-label"> 上層單位 </label></v-col>
               <v-col cols="7">
                 <label for="" class="ml-4">{{ targetItem.parentUuid }}</label>
               </v-col>
-              <v-col cols="3" class="text-right bg-thead">
+              <v-col cols="3" class="text-right bg-thead thead">
                 <label class="form-label"> <abbr class="necessary" title="為必填(選)欄位,不能為空白。">* </abbr>單位名稱 </label></v-col
               >
               <v-col cols="7"><v-text-field v-model="targetItem.name" variant="outlined" density="compact" hide-details="auto"></v-text-field></v-col>
-              <v-col cols="3" class="text-right bg-thead">
+              <v-col cols="3" class="text-right bg-thead thead">
                 <label class="form-label"> <abbr class="necessary" title="為必填(選)欄位,不能為空白。">* </abbr>單位代碼(二碼) </label></v-col
               >
               <v-col cols="7"><v-text-field v-model="targetItem.deptId" variant="outlined" density="compact" hide-details="auto"></v-text-field></v-col>
-              <v-col cols="3" class="text-right bg-thead">
+              <v-col cols="3" class="text-right bg-thead thead">
                 <label class="form-label"> <abbr class="necessary" title="為必填(選)欄位,不能為空白。">* </abbr>單位主管 </label></v-col
               >
               <v-col cols="7">
                 <v-autocomplete v-model="targetItem.chief" variant="outlined" density="compact" hide-details="auto"></v-autocomplete>
               </v-col>
-              <v-col cols="3" class="text-right bg-thead">
+              <v-col cols="3" class="text-right bg-thead thead">
                 <label class="form-label"> <abbr class="necessary" title="為必填(選)欄位,不能為空白。">* </abbr>順序 </label></v-col
               >
               <v-col cols="7"><v-text-field v-model="targetItem.priority" variant="outlined" density="compact" hide-details="auto"></v-text-field></v-col>
-              <v-col cols="3" class="text-right bg-thead"> <label class="form-label"> 描述 </label></v-col>
+              <v-col cols="3" class="text-right bg-thead thead"> <label class="form-label"> 描述 </label></v-col>
               <v-col cols="7"><v-text-field v-model="targetItem.description" variant="outlined" density="compact" hide-details="auto"></v-text-field></v-col>
-              <v-col cols="3" class="text-right bg-thead">
+              <v-col cols="3" class="text-right bg-thead thead">
                 <label class="form-label"> <abbr class="necessary" title="為必填(選)欄位,不能為空白。">* </abbr>送至上層單位簽核 </label></v-col
               >
               <v-col cols="7">
                 <v-radio-group v-model="targetItem.upper_certify" hide-details="auto" inline density="compact"> <v-radio v-for="(item, i) in $globalModels.getCommonArrayUtil('yesFlag')" :label="item.label" :value="item.value"></v-radio> </v-radio-group
               ></v-col>
-              <v-col cols="3" class="text-right bg-thead">
+              <v-col cols="3" class="text-right bg-thead thead">
                 <label class="form-label"> <abbr class="necessary" title="為必填(選)欄位,不能為空白。">* </abbr>狀態 </label></v-col
               >
               <v-col cols="7">

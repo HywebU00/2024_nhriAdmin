@@ -2,6 +2,9 @@
   margin: 0 1rem 2rem 1rem;
   .thead {
     padding: 12px 1rem;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
   }
 }
 .planInfo {
@@ -24,6 +27,10 @@
   thead {
     text-wrap: nowrap;
     background-color: mix(#348fe2, #fff, 20%);
+    th {
+      text-wrap: nowrap;
+      white-space: nowrap;
+    }
   }
   tbody {
     td {
@@ -59,6 +66,9 @@
   thead {
     text-wrap: nowrap;
     background-color: mix(#348fe2, #fff, 20%);
+    th {
+      white-space: nowrap;
+    }
   }
   tbody {
     p {

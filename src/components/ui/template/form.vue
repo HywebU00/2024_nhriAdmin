@@ -223,7 +223,7 @@
             </v-col>
           </v-row>
           <v-row class="formGrp">
-            <v-col cols="12" md="2" class="">
+            <v-col cols="12" lg="2" class="">
               <label class="label" for="list"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">* </abbr>多選選單</label>
             </v-col>
             <v-col class="checkGrp" id="list">

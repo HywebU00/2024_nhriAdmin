@@ -91,7 +91,14 @@
   }
   .label {
     margin-right: 0;
+    label {
+      line-height: 1.25rem;
+      margin: 0;
+      align-items: center;
+      display: flex;
+    }
   }
+
   @media screen and (max-width: 1280px) {
     h4 {
       margin-bottom: 1rem;
@@ -109,5 +116,16 @@
     margin-left: -24px;
     padding-left: 36px;
     border-radius: 0.25rem;
+  }
+}
+.app-sidebar-float-submenu-container {
+  .app-sidebar-float-submenu {
+    .menu-item {
+      .menu-link {
+        .menu-text {
+          margin-left: 0.5rem;
+        }
+      }
+    }
   }
 }
