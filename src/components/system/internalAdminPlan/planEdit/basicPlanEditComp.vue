@@ -88,7 +88,7 @@
           <v-text-field v-model="targetItem.outlineType" variant="outlined" density="compact" hide-details="auto"></v-text-field>
         </v-col>
       </v-row>
-      <v-row class="tableInfo">
+      <v-row class="planInfo">
         <v-col cols="12" class="text-center bg-thead thead mt-2">
           <label class="form-label"> <abbr class="necessary" title="為必填(選)欄位,不能為空白。">* </abbr>中文計畫內容 </label></v-col
         >
@@ -101,7 +101,7 @@
         <v-col cols="12">
           <v-textarea variant="outlined" v-model="selectItem.excerpt" auto-grow></v-textarea>
         </v-col>
-        <v-col cols="12" class="text-center bg-thead mt-2"> <label class="form-label"> 備註 </label></v-col>
+        <v-col cols="12" class="text-center bg-thead mt-2 thead"> <label class="form-label"> 備註 </label></v-col>
         <v-col cols="12">
           <v-textarea variant="outlined" v-model="selectItem.excerpt" auto-grow></v-textarea>
         </v-col>
