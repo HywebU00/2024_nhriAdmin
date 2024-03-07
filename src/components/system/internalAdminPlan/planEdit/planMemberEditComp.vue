@@ -6,7 +6,7 @@
     </v-card-title>
     <v-card-text>
       <v-container class="selectInfo">
-        <h4 class="ml-3">院內人員</h4>
+        <h4 class="">院內人員</h4>
         <v-row>
           <v-col cols="12" lg="6">
             <v-row class="formGrp">
@@ -90,7 +90,7 @@
             <td>{{ item.percent }}</td>
             <td>{{ item.comments }}</td>
             <td>
-              <Icon icon="clarity:remove-line" style="font-size: 24px" color="red" />
+              <span class="d-flex justify-center"> <i class="fa-regular fa-circle-xmark text-danger"></i></span>
             </td>
           </tr>
         </tbody>
@@ -148,7 +148,7 @@
                 </thead>
             </v-table> -->
       <v-container class="selectInfo">
-        <h4 class="ml-3">院外人員</h4>
+        <h4 class="">院外人員</h4>
         <v-row>
           <v-col cols="">
             <v-row class="formGrp">
@@ -180,7 +180,7 @@
               </v-col>
             </v-row>
           </v-col>
-          <v-col cols="auto">
+          <v-col cols="12" lg="auto" class="d-flex align-lg-center justify-end align-end">
             <v-btn color="primary">新增</v-btn>
           </v-col>
         </v-row>
@@ -230,7 +230,7 @@
             <td>{{ item.percent }}</td>
             <td>{{ item.comments }}</td>
             <td>
-              <Icon icon="clarity:remove-line" style="font-size: 24px" color="red" />
+              <span class="d-flex justify-center"> <i class="fa-regular fa-circle-xmark text-danger"></i></span>
             </td>
           </tr>
         </tbody>

@@ -1,16 +1,10 @@
 <template>
   <!-- BEGIN breadcrumb -->
-  <!-- <ol class="breadcrumb">
-
-        <li class="breadcrumb-item"> {{ $route.meta.parentPathName }}</li>
-
-    </ol> -->
   <ol class="breadcrumb float-xl-end">
     <li class="breadcrumb-item">{{ $route.meta.parentPathName }}{{ $route.name }}</li>
   </ol>
   <!-- END breadcrumb -->
   <!-- BEGIN page-header -->
-  <!-- <li class="breadcrumb-item"> {{ $route.meta.parentPathName }}</li> -->
 
   <h1 class="page-header">{{ $route.name }} <small></small></h1>
   <!-- END page-header -->
@@ -22,23 +16,56 @@
       <panel-toolbar />
     </panel-header>
     <panel-body>
-      <v-row dense>
-        <label class="col-md-2 form-label text-center mb-5 label">計畫年度</label>
-        <v-col md="4"><v-text-field variant="outlined" density="compact"></v-text-field></v-col>
-        <label class="col-md-2 form-label text-center mb-5">計畫類別</label>
-        <v-col md="4"><v-text-field variant="outlined" density="compact"></v-text-field></v-col>
-        <label class="col-md-2 form-label text-center mb-5">計畫編號</label>
-        <v-col md="4">
-          <v-autocomplete variant="outlined" :items="$globalModels.getModel('fakeUnitArray')" density="compact"></v-autocomplete>
-        </v-col>
-        <label class="col-md-2 form-label text-center mb-5">計畫名稱</label>
-        <v-col md="4">
-          <v-autocomplete variant="outlined" :items="$globalModels.getModel('fakeUnitArray')" density="compact"></v-autocomplete>
-        </v-col>
-        <v-col class="text-center" cols="6" offset-md="6">
-          <v-btn class="mb-5" color="primary" variant="elevated" size="small">查詢</v-btn>
-        </v-col>
-      </v-row>
+      <v-form>
+        <v-container>
+          <v-row>
+            <v-col cols="12" lg="6">
+              <v-row class="formGrp">
+                <v-col class="label" cols="12" lg="2">
+                  <label class="" for="">計畫年度</label>
+                </v-col>
+                <v-col cols="">
+                  <v-text-field variant="outlined" hide-details="auto" density="compact"></v-text-field>
+                </v-col>
+              </v-row>
+            </v-col>
+            <v-col cols="12" lg="6">
+              <v-row class="formGrp">
+                <v-col class="label" cols="12" lg="2">
+                  <label class="" for="">計畫類別</label>
+                </v-col>
+                <v-col cols="">
+                  <v-text-field variant="outlined" hide-details="auto" density="compact"></v-text-field>
+                </v-col>
+              </v-row>
+            </v-col>
+            <v-col cols="12" lg="6">
+              <v-row class="formGrp">
+                <v-col class="label" cols="12" lg="2">
+                  <label class="" for="">計畫編號</label>
+                </v-col>
+                <v-col cols="">
+                  <v-autocomplete hide-details="auto" variant="outlined" :items="$globalModels.getModel('fakeUnitArray')" density="compact"></v-autocomplete>
+                </v-col>
+              </v-row>
+            </v-col>
+            <v-col cols="12" lg="6">
+              <v-row class="formGrp">
+                <v-col class="label" cols="12" lg="2">
+                  <label class="" for="">計畫名稱</label>
+                </v-col>
+                <v-col cols="">
+                  <v-autocomplete hide-details="auto" variant="outlined" :items="$globalModels.getModel('fakeUnitArray')" density="compact"></v-autocomplete>
+                </v-col>
+              </v-row>
+            </v-col>
+          </v-row>
+        </v-container>
+        <div class="d-flex justify-center my-3">
+          <v-btn class="bg-primary px-5 mx-2">搜尋</v-btn>
+          <v-btn class="bg-gray px-4 mx-2">新增項目</v-btn>
+        </div>
+      </v-form>
     </panel-body>
   </panel>
   <panel>
@@ -262,8 +289,6 @@ import internalAdminPlanViewComp from '@/components/system/internalAdminPlan/int
 import internalAdminPlanEditComp from '@/components/system/internalAdminPlan/internalAdminPlanEditComp.vue';
 import planCertifyHistoryTableComp from '@/components/system/internalAdminPlan/planView/planCertifyHistoryTableComp.vue';
 
-// import treeview from "vue3-treeview";
-// import "vue3-treeview/dist/style.css";
 import { useAppSidebarMenuStore } from '@/pinia/app-sidebar-menu';
 const appSidebarMenu = useAppSidebarMenuStore();
 const vm = this;
@@ -276,7 +301,7 @@ export default {
   data() {
     return {
       dialog1: false,
-      dialog2: true,
+      dialog2: false,
       dialog3: false,
       pageType: 'normal',
       selectedData: this.$globalModels.getModel('fakeBasicPlan')[0],
@@ -375,13 +400,6 @@ export default {
   },
   mounted() {
     console.log('mounted');
-    // this.$globalFunctions.function1();
-    // this.$globalFunctions.function2();
-    // var vm = this;
-
-    // console.log(object);
-    // this.selectedData = this.tableData[0]
-    // this.dialog1 = true
   },
   created() {},
 };

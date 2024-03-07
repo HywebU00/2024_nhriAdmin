@@ -6,15 +6,16 @@
 
   <h1 class="page-header">{{ $route.name }} <small></small></h1>
   <!-- END page-header -->
-
+  <small class="text-primary">檔案更新 > 需新增 class="treeComponent" </small>
   <!-- BEGIN panel -->
   <div class="row mb-3">
     <div class="col-xl-4">
       <!-- BEGIN panel -->
       <panel>
         <panel-header> <panel-title> 組織樹 </panel-title></panel-header>
+
         <panel-body>
-          <VTree ref="basicTreeRef" :data="basicUsage" :loading="loading" emptyText="" titleField="title" keyField="uuid" style="font-size: 16px" :nodeClassName="(node) => `generated-class-${node.id}`" v-model="selectedData" selectable> </VTree>
+          <VTree class="treeComponent" ref="basicTreeRef" :data="basicUsage" :loading="loading" emptyText="" titleField="title" keyField="uuid" :nodeClassName="(node) => `generated-class-${node.id}`" v-model="selectedData" selectable> </VTree>
         </panel-body>
       </panel>
     </div>
@@ -30,54 +31,58 @@
           </div>
         </panel-header>
         <panel-body>
-          <v-row>
-            <v-col cols="3" class="text-right bg-light-blue-lighten-3"> <label class="form-label" style="font-size: 16px"> 上層單位 </label></v-col>
-            <v-col cols="7">
-              <!-- {{ targetItem.parentUuid }} -->
-              <label for="" class="ml-4" style="font-size: 16px">{{ targetItem.parentUuid }}</label>
-            </v-col>
-            <v-col cols="3" class="text-right bg-light-blue-lighten-3">
-              <label class="form-label" style="font-size: 16px"> <Icon icon="material-symbols-light:star" style="margin-bottom: 4; color: red" />單位名稱 </label></v-col
-            >
-            <v-col cols="7"><v-text-field v-model="targetItem.name" variant="outlined" density="compact" hide-details="auto"></v-text-field></v-col>
-            <v-col cols="3" class="text-right bg-light-blue-lighten-3">
-              <label class="form-label" style="font-size: 16px"> <Icon icon="material-symbols-light:star" style="margin-bottom: 4; color: red" />單位代碼(二碼) </label></v-col
-            >
-            <v-col cols="7"><v-text-field v-model="targetItem.deptId" variant="outlined" density="compact" hide-details="auto"></v-text-field></v-col>
-            <v-col cols="3" class="text-right bg-light-blue-lighten-3">
-              <label class="form-label" style="font-size: 16px"> <Icon icon="material-symbols-light:star" style="margin-bottom: 4; color: red" />單位主管 </label></v-col
-            >
-            <v-col cols="7">
-              <v-autocomplete v-model="targetItem.chief" variant="outlined" density="compact" hide-details="auto"></v-autocomplete>
-            </v-col>
-            <v-col cols="3" class="text-right bg-light-blue-lighten-3">
-              <label class="form-label" style="font-size: 16px"> <Icon icon="material-symbols-light:star" style="margin-bottom: 4; color: red" />順序 </label></v-col
-            >
-            <v-col cols="7"><v-text-field v-model="targetItem.priority" variant="outlined" density="compact" hide-details="auto"></v-text-field></v-col>
-            <v-col cols="3" class="text-right bg-light-blue-lighten-3"> <label class="form-label" style="font-size: 16px"> 描述 </label></v-col>
-            <v-col cols="7"><v-text-field v-model="targetItem.description" variant="outlined" density="compact" hide-details="auto"></v-text-field></v-col>
-            <v-col cols="3" class="text-right bg-light-blue-lighten-3">
-              <label class="form-label" style="font-size: 16px"> <Icon icon="material-symbols-light:star" style="margin-bottom: 4; color: red" />送至上層單位簽核 </label></v-col
-            >
-            <v-col cols="7">
-              <v-radio-group v-model="targetItem.upper_certify" hide-details="auto" inline density="compact"> <v-radio v-for="(item, i) in $globalModels.getCommonArrayUtil('yesFlag')" :label="item.label" :value="item.value"></v-radio> </v-radio-group
-            ></v-col>
-            <v-col cols="3" class="text-right bg-light-blue-lighten-3">
-              <label class="form-label" style="font-size: 16px"> <Icon icon="material-symbols-light:star" style="margin-bottom: 4; color: red" />狀態 </label></v-col
-            >
-            <v-col cols="7">
-              <v-radio-group v-model="targetItem.status" hide-details="auto" inline density="compact">
-                <v-radio v-for="(item, i) in $globalModels.getCommonArrayUtil('activeFlag')" :label="item.label" :value="item.value"></v-radio>
-              </v-radio-group>
-            </v-col>
-            <v-col cols="10" class="text-right">
-              <v-btn color="blue-darken-1" variant="elevated" @click="handleAdd"> addTest </v-btn>
-              <v-btn color="blue-darken-1" variant="elevated" @click="handleAddChild"> addChildTest </v-btn>
-              <v-btn color="blue-darken-1" variant="elevated" @click="handleRemove"> removeTest </v-btn>
-              <v-btn color="blue-darken-1" variant="elevated"> 儲存 </v-btn>
-              <v-btn color="blue-darken-1" variant="text"> 重置 </v-btn>
-            </v-col>
-          </v-row>
+          <v-container>
+            <v-row>
+              <v-col cols="3" class="text-right bg-thead"> <label class="form-label"> 上層單位 </label></v-col>
+              <v-col cols="7">
+                <label for="" class="ml-4">{{ targetItem.parentUuid }}</label>
+              </v-col>
+              <v-col cols="3" class="text-right bg-thead">
+                <label class="form-label"> <abbr class="necessary" title="為必填(選)欄位,不能為空白。">* </abbr>單位名稱 </label></v-col
+              >
+              <v-col cols="7"><v-text-field v-model="targetItem.name" variant="outlined" density="compact" hide-details="auto"></v-text-field></v-col>
+              <v-col cols="3" class="text-right bg-thead">
+                <label class="form-label"> <abbr class="necessary" title="為必填(選)欄位,不能為空白。">* </abbr>單位代碼(二碼) </label></v-col
+              >
+              <v-col cols="7"><v-text-field v-model="targetItem.deptId" variant="outlined" density="compact" hide-details="auto"></v-text-field></v-col>
+              <v-col cols="3" class="text-right bg-thead">
+                <label class="form-label"> <abbr class="necessary" title="為必填(選)欄位,不能為空白。">* </abbr>單位主管 </label></v-col
+              >
+              <v-col cols="7">
+                <v-autocomplete v-model="targetItem.chief" variant="outlined" density="compact" hide-details="auto"></v-autocomplete>
+              </v-col>
+              <v-col cols="3" class="text-right bg-thead">
+                <label class="form-label"> <abbr class="necessary" title="為必填(選)欄位,不能為空白。">* </abbr>順序 </label></v-col
+              >
+              <v-col cols="7"><v-text-field v-model="targetItem.priority" variant="outlined" density="compact" hide-details="auto"></v-text-field></v-col>
+              <v-col cols="3" class="text-right bg-thead"> <label class="form-label"> 描述 </label></v-col>
+              <v-col cols="7"><v-text-field v-model="targetItem.description" variant="outlined" density="compact" hide-details="auto"></v-text-field></v-col>
+              <v-col cols="3" class="text-right bg-thead">
+                <label class="form-label"> <abbr class="necessary" title="為必填(選)欄位,不能為空白。">* </abbr>送至上層單位簽核 </label></v-col
+              >
+              <v-col cols="7">
+                <v-radio-group v-model="targetItem.upper_certify" hide-details="auto" inline density="compact"> <v-radio v-for="(item, i) in $globalModels.getCommonArrayUtil('yesFlag')" :label="item.label" :value="item.value"></v-radio> </v-radio-group
+              ></v-col>
+              <v-col cols="3" class="text-right bg-thead">
+                <label class="form-label"> <abbr class="necessary" title="為必填(選)欄位,不能為空白。">* </abbr>狀態 </label></v-col
+              >
+              <v-col cols="7">
+                <v-radio-group v-model="targetItem.status" hide-details="auto" inline density="compact">
+                  <v-radio v-for="(item, i) in $globalModels.getCommonArrayUtil('activeFlag')" :label="item.label" :value="item.value"></v-radio>
+                </v-radio-group>
+              </v-col>
+            </v-row>
+            <v-row class="mt-4">
+              <v-col class="justify-center d-flex">
+                <v-btn class="mx-1" color="primary" variant="elevated" @click="handleAdd"> addTest </v-btn>
+                <v-btn class="mx-1" color="secondary" variant="elevated" @click="handleAddChild"> addChildTest </v-btn>
+                <v-btn class="mx-1" color="danger" variant="elevated" @click="handleRemove"> removeTest </v-btn>
+                <v-btn class="mx-1" color="submit" variant="elevated"> 儲存 </v-btn>
+                <v-btn class="mx-1" color="cancel" variant="elevated"> 重置 </v-btn>
+                <v-btn class="mx-1" color="cancel" variant="text"> 重置 </v-btn>
+              </v-col>
+            </v-row>
+          </v-container>
         </panel-body>
       </panel>
     </div>
@@ -88,8 +93,6 @@
 import VTree, { VTreeNode, VTreeSearch, VTreeDrop } from '@wsfe/vue-tree';
 import '@wsfe/vue-tree/style.css';
 
-// import treeview from "vue3-treeview";
-// import "vue3-treeview/dist/style.css";
 import { mapState, mapActions } from 'pinia';
 import { useAppSidebarMenuStore } from '@/pinia/app-sidebar-menu';
 import { useAppApiDataStore } from '@/pinia/app-api-data';
@@ -98,15 +101,8 @@ const appSidebarMenu = useAppSidebarMenuStore();
 export default {
   components: {
     VTree,
-
-    // tree: treeview,
   },
   computed: {
-    // ...mapState(useAppApiDataStore, {
-    // 	testArray2: 'getTestArray2',
-    // 	// 你也可以写一个函数来获得对 store 的访问权
-
-    // }),
     ...mapState(useAppApiDataStore, ['apiServerUrl', 'apiToken']),
   },
   data() {
@@ -118,31 +114,13 @@ export default {
       selectedData: null,
       targetItem: null,
       treeData: null,
-      // targetItem: {
-      //     "uuid": "2c90829732fc6dd80132fc7a9c200001",
-      //     "depth": "2",
-      //     "parentUuid": "1",
-      //     "name": "生技與藥物研究所",
-      //     "deptId": "BP",
-      //     "description": "",
-      //     "chief": "880802",
-      //     "priority": "1",
-      //     "status": "1",
-      //     "modify_date": "12-9月 -17 11.28.46.959000000 上午",
-      //     "modify_by": "10504",
-      //     "upper_certify": "0"
-      // },
       headers: [
         { title: '帳號', key: 'userId', width: 30, sortable: true, removable: true },
         { title: '姓名', key: 'userName', width: 40, sortable: true, removable: true },
         { title: '單位', key: 'deptName', width: 100, sortable: false, removable: true },
         { title: '職稱', key: 'jobTitle', width: 50, sortable: false, removable: true },
-
         { title: '角色', key: 'roleName', width: 80, sortable: false, removable: true },
         { title: '狀態', key: 'active', width: 20, sortable: false, removable: true },
-        // { title: "設定角色", key: "g", width: 20, sortable: false },
-        // { title: "設定從屬人員", key: "h", width: 20, sortable: false },
-
         { title: '編輯', key: 'action', width: 80, sortable: false, removable: true },
       ],
       tableData: [],
@@ -188,8 +166,6 @@ export default {
         obj.children = [];
         uuidMap[obj.uuid] = obj;
       });
-      // inputArray.sort((a, b) => a.depth - b.depth);
-      // inputArray.sort((a, b) => a.priority - b.priority); // 根據 priority 屬性升序排序
       inputArray.sort(function (a, b) {
         if (a.depth !== b.depth) {
           return a.depth - b.depth;
@@ -197,7 +173,6 @@ export default {
           return a.priority - b.priority;
         }
       });
-      // console.log("inputArray ", inputArray);
       inputArray.forEach((obj) => {
         const parentUUID = obj.parentUuid;
         // console.log("parentUUID", obj.parentUuid);
@@ -256,8 +231,6 @@ export default {
           },
         })
         .then(function (response) {
-          // console.log("response.data ", response.data);
-          // let dbTree = vm.organizeArray(response.data)
           vm.treeData = response.data;
           vm.basicUsage = vm.organizeArray(response.data);
           // console.log("dbTree ", dbTree);
@@ -278,22 +251,8 @@ export default {
   mounted() {
     console.log('mounted dept ', this.apiToken);
     this.getChild();
-
-    // this.$globalFunctions.function1();
-    // this.$globalFunctions.function2();
-    // var vm = this;
-
-    // console.log(object);
-
-    // console.log("!!!! " + this.basicTreeRef);
-    // this.$refs.basicTreeRef.setExpandAll(true)
   },
-  created() {
-    // var dbTree = this.organizeArray(this.$globalModels.getModel('fakeDeptArray'));
-    // console.log("dbTree " + JSON.stringify(dbTree));
-    // console.log(JSON.stringify(this.convertToHierarchy(dbTree), null, 2))
-    // this.basicUsage = dbTree
-  },
+  created() {},
   watch: {
     selectedData(val) {
       this.handleSelectNode(val);

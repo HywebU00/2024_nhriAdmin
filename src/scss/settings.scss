@@ -1,29 +1,11 @@
-// // $color-pack: false;
-
-//@import '@/scss/customize/variables.scss';
-// @import '@/scss/customize/common/mixins/_mediaquery.scss';
-// @import '@/scss/customize/common/mixins/_text.scss';
-
 // //customizingComponents
 @import '@/scss/customize/customizingComponents/form.scss';
 @import '@/scss/customize/customizingComponents/table.scss';
-// @import '@/sass/customizingComponents/table.scss';
-// @import '@/sass/customizingComponents/card.scss';
-// @import '@/sass/customizingComponents/treeBlock.scss';
-// @import '@/sass/customizingComponents/accordion.scss';
-// @import '@/sass/customizingComponents/datePicker.scss';
-
-// //material-icons-round
-// @import '@/sass/vendor/material-icons-round.scss';
 
 // //layout
-// @import '@/sass/layout/layout.scss';
-// @import '@/sass/layout/customize_color.scss';
-// @import '@/sass/layout/customize_font.scss';
 @import '@/scss/customize/customizingComponents/layout.scss';
 
 //vuetifyCSS
-
 @import '@/scss/customize/components/VListItem.scss';
 @import '@/scss/customize/components/VTable.scss';
 @import '@/scss/customize/components/VGrid.scss';

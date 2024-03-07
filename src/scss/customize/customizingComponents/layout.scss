@@ -4,6 +4,11 @@
 .menu-text {
   font-size: 14px;
 }
+.panel-heading-btn {
+  i {
+    font-size: 0.65rem;
+  }
+}
 .v-btn--size-small {
   .v-btn__content {
     font-size: 14px;
@@ -35,8 +40,6 @@
       }
       &:hover {
         color: #333;
-        // border: 1px solid mix(#0156a2, #fff, 70%);
-        // color: #fff;
       }
     }
     .v-tab--selected {
@@ -82,5 +85,29 @@
   background-color: #e8e8e8;
   .v-input {
     background-color: #fff;
+  }
+  h4 {
+    margin-left: 6px;
+  }
+  .label {
+    margin-right: 0;
+  }
+  @media screen and (max-width: 1280px) {
+    h4 {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.treeComponent {
+  .ctree-tree-node__square {
+    padding-left: 12px;
+  }
+  .ctree-tree-node__title {
+    height: 40px;
+    line-height: 40px;
+    margin-left: -24px;
+    padding-left: 36px;
+    border-radius: 0.25rem;
   }
 }
