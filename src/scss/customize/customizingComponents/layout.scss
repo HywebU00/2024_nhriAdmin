@@ -174,3 +174,58 @@
     }
   }
 }
+.loginPage {
+  .login-header {
+    h1 {
+      font-size: 1.75rem;
+      margin-bottom: 0;
+      span {
+        margin-left: 0.25rem;
+        font-size: 1.75rem;
+        font-weight: 300;
+      }
+    }
+    small {
+      margin-top: 0.5rem;
+    }
+  }
+  .loginBtn {
+    font-weight: bold;
+  }
+}
+.login.login-v1 {
+  .login-container {
+    .login-body {
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        background-size: cover;
+        background-image: url('@/assets/nhri_bg.png');
+        background-position: cover;
+        width: 100%;
+        opacity: 0.35;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+}
+.loginForm {
+  .v-input--density-default .v-field--variant-filled {
+    background-color: rgba(255, 255, 255);
+    color: #121010;
+    border-radius: 0.25rem;
+    .v-field__outline {
+      display: none;
+    }
+  }
+  .v-selection-control {
+    color: #fff;
+    .v-label {
+      opacity: 1;
+    }
+  }
+}

@@ -25,6 +25,7 @@ const router = createRouter({
 
   //  ui介面路由
         { path: '/' ,  name: 'UI介面',component: () => import('@/components/ui/template/form.vue') },
+            // { path: '/' ,  name: 'UI介面',component: () => import('@/components/system/page/login.vue') },
         { path: '/ui/template/tree', name: '樹狀圖'  ,meta: { parentPathName: '首頁 / UI介面 / ' } ,component: () => import('@/components/ui/template/tree.vue') },
         { path: '/ui/template/form',name: '表單模板',meta: { parentPathName: '首頁 / UI介面 / ' } , component: () => import('@/components/ui/template/form.vue') },
  { path: '/ui/template/table',name: '列表模板',meta: { parentPathName: '首頁 / UI介面 / ' } , component: () => import('@/components/ui/template/table.vue') },
