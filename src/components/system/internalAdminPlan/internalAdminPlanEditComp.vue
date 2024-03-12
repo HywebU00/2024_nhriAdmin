@@ -9,7 +9,6 @@
         >
         <v-spacer></v-spacer>
         <v-btn class="closeBtn" color="" @click="handleClose">
-          <!-- <v-icon class="fa-solid fa-xmark"></v-icon> -->
           <Icon icon="mingcute:close-fill" style="font-size: 16px" />
         </v-btn> </v-tabs
     ></v-card-subtitle>

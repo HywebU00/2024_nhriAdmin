@@ -1,9 +1,5 @@
 <template>
   <v-card>
-    <!-- <v-card-item class="bg-cyan-darken-1">
-            <v-card-title>
-                <span class="text-h5">Sarah Mcbeal</span>
-            </v-card-title></v-card-item> -->
     <v-card-title>
       <h4 class="mt-1 mb-3 ml-3" v-if="selectItem.uuid">編輯計畫基本資料</h4>
       <h4 class="mt-1 mb-3 ml-3" v-else="selectItem.uuid">新增院內研究計畫</h4>
@@ -15,13 +11,13 @@
           <v-text-field v-model="targetItem.planYear" variant="outlined" density="compact" hide-details="auto"></v-text-field>
         </v-col>
         <v-col cols="2" class="text-right bg-thead thead">
-          <label class="form-label"> <Icon icon="material-symbols-light:star" style="margin-bottom: 4; color: red" />計畫類型 </label></v-col
+          <label class="form-label"> <abbr class="necessary" title="為必填(選)欄位,不能為空白。">* </abbr>計畫類型 </label></v-col
         >
         <v-col cols="4">
           <v-text-field v-model="targetItem.planType" variant="outlined" density="compact" hide-details="auto"></v-text-field>
         </v-col>
         <v-col cols="2" class="text-right bg-thead thead">
-          <label class="form-label"> <Icon icon="material-symbols-light:star" style="margin-bottom: 4; color: red" />計畫類別 </label></v-col
+          <label class="form-label"> <abbr class="necessary" title="為必填(選)欄位,不能為空白。">* </abbr>計畫類別 </label></v-col
         >
 
         <v-col cols="4">

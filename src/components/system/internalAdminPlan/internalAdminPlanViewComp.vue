@@ -1,14 +1,14 @@
 <template>
   <v-card class="cardDialog">
     <v-card-subtitle>
-      <v-tabs v-model="tab" align-tabs="start" class="ml-2 mr-1 mt-1" density="comfortable">
+      <v-tabs v-model="tab" align-tabs="start" class="tabBtn ml-2 mr-1 mt-1" density="comfortable">
         <v-tab v-for="(item, i) in tabsArray" :key="i" :value="item.value">
           <label class="form-label" style="font-size: 16px">
             {{ item.text }}
           </label></v-tab
         >
         <v-spacer></v-spacer>
-        <v-btn color="blue-grey-lighten-4" @click="handleClose">
+        <v-btn class="closeBtn" color="" @click="handleClose">
           <Icon icon="mingcute:close-fill" style="font-size: 16px" />
         </v-btn> </v-tabs
     ></v-card-subtitle>
