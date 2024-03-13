@@ -16,7 +16,7 @@ export default createVuetify({
           loginColor: '#0156a2',
           light: '#8eebb1',
           navText: '#262626',
-          submit: '#247a96', //'#4EB6D9',
+          submit: '#538e9f', //'#4EB6D9',
           warning: '#ffd900',
           danger: '#ff5b57',
           cancel: '#6C7582',
