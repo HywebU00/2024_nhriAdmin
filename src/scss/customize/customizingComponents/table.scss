@@ -26,7 +26,8 @@
   }
   thead {
     text-wrap: nowrap;
-    background-color: mix(#348fe2, #fff, 20%);
+    background-color: #e3e3e3;
+    // background-color: mix(#00acac, #fff, 10%);
     th {
       text-wrap: nowrap;
       white-space: nowrap;
@@ -50,7 +51,7 @@
           cursor: pointer;
           font-size: 20px;
           &:hover {
-            color: #348fe2;
+            color: #00acac; //#348fe2;
           }
         }
       }
