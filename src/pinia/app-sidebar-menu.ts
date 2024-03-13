@@ -53,6 +53,7 @@ export const useAppSidebarMenuStore = defineStore({
 					{ url: '/ui/template/tree', icon: 'fa fa-file', title: '樹狀模板' },	
 					{ url: '/ui/template/form', icon: 'fa fa-file', title: '表單模板' },	
 					{ url: '/ui/template/table', icon: 'fa fa-file', title: '列表模板' },	
+					{ url: '/ui/components/component', icon: 'fa fa-file', title: '元件列表' },	
 				]
 			},
 		}
