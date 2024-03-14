@@ -308,53 +308,53 @@
     <panel-body>
       <!-- 計畫列表 start -->
       <v-row class="tableInfo">
-        <v-col cols="2" class="text-right bg-thead thead"> <label class="form-label"> 計畫年度 </label></v-col>
-        <v-col cols="4" class="tbody"> 101 </v-col>
-        <v-col cols="2" class="text-right bg-thead thead">
+        <v-col cols="4" lg="2" class="text-right bg-thead thead"> <label class="form-label"> 計畫年度 </label></v-col>
+        <v-col lg="4" cols="8" class="tbody"> 101 </v-col>
+        <v-col cols="4" lg="2" class="text-right bg-thead thead">
           <label class="form-label"> <abbr class="necessary" title="為必填(選)欄位,不能為空白。">* </abbr>計畫類型 </label></v-col
         >
-        <v-col cols="4" class="tbody"> 402881902f71a65b012f71b76a070001 </v-col>
-        <v-col cols="2" class="text-right bg-thead thead"> <label class="form-label"> 計畫類別 </label></v-col>
+        <v-col cols="8" lg="4" class="tbody"> 402881902f71a65b012f71b76a070001 </v-col>
+        <v-col cols="4" lg="2" class="text-right bg-thead thead"> <label class="form-label"> 計畫類別 </label></v-col>
 
-        <v-col cols="4" class="tbody"> 1234 </v-col>
-        <v-col cols="2" class="text-right bg-thead thead"> <label class="form-label"> 執行單位 </label></v-col>
+        <v-col cols="8" lg="4" class="tbody"> 1234 </v-col>
+        <v-col cols="4" lg="2" class="text-right bg-thead thead"> <label class="form-label"> 執行單位 </label></v-col>
 
-        <v-col cols="4" class="tbody"> 2c90829732fc6dd80132fc7a9c200001 </v-col>
-        <v-col cols="2" class="text-right bg-thead thead"> <label class="form-label"> 單位主管 </label></v-col>
-        <v-col cols="4" class="tbody"> 單位主管 </v-col>
-        <v-col cols="2" class="text-right bg-thead thead">
+        <v-col cols="8" lg="4" class="tbody"> 2c90829732fc6dd80132fc7a9c200001 </v-col>
+        <v-col cols="4" lg="2" class="text-right bg-thead thead"> <label class="form-label"> 單位主管 </label></v-col>
+        <v-col cols="8" lg="4" class="tbody"> 單位主管 </v-col>
+        <v-col cols="4" lg="2" class="text-right bg-thead thead">
           <label class="form-label">
             <abbr class="necessary" title="為必填(選)欄位,不能為空白。">* </abbr>
             計畫主持人
           </label></v-col
         >
-        <v-col cols="4" class="tbody"> 860807-1 </v-col>
-        <v-col cols="2" class="text-right bg-thead thead"> <label class="form-label"> 協同/共同/其它主持人(院內) </label></v-col>
-        <v-col cols="4" class="tbody"> 其它主持人 </v-col>
-        <v-col cols="2" class="text-right bg-thead thead"> <label class="form-label"> 協同/共同/其它主持人(院外) </label></v-col>
-        <v-col cols="4" class="tbody"> 其它主持人 </v-col>
-        <v-col cols="2" class="text-right bg-thead thead"> <label class="form-label"> 計畫登錄人 </label></v-col>
-        <v-col cols="4" class="tbody"> 其它主持人 </v-col>
-        <v-col cols="2" class="text-right bg-thead thead"> <label class="form-label"> 計畫編號 </label></v-col>
-        <v-col cols="4" class="tbody"> 12345 </v-col>
-        <v-col cols="2" class="text-right bg-thead thead">
+        <v-col cols="8" lg="4" class="tbody"> 860807-1 </v-col>
+        <v-col cols="4" lg="2" class="text-right bg-thead thead"> <label class="form-label"> 協同/共同/其它主持人(院內) </label></v-col>
+        <v-col cols="8" lg="4" class="tbody"> 其它主持人 </v-col>
+        <v-col cols="4" lg="2" class="text-right bg-thead thead"> <label class="form-label"> 協同/共同/其它主持人(院外) </label></v-col>
+        <v-col cols="8" lg="4" class="tbody"> 其它主持人 </v-col>
+        <v-col cols="4" lg="2" class="text-right bg-thead thead"> <label class="form-label"> 計畫登錄人 </label></v-col>
+        <v-col cols="8" lg="4" class="tbody"> 其它主持人 </v-col>
+        <v-col cols="4" lg="2" class="text-right bg-thead thead"> <label class="form-label"> 計畫編號 </label></v-col>
+        <v-col cols="8" lg="4" class="tbody"> 12345 </v-col>
+        <v-col cols="4" lg="2" class="text-right bg-thead thead">
           <label class="form-label"> <abbr class="necessary" title="為必填(選)欄位,不能為空白。">* </abbr>中文計畫名稱 </label></v-col
         >
-        <v-col cols="4" class="tbody"> 自動化高速藥物篩選研究 </v-col>
-        <v-col cols="2" class="text-right bg-thead thead"> <label class="form-label"> 英文計畫名稱 </label></v-col>
-        <v-col cols="4" class="tbody"> Research for high throughput screening</v-col>
-        <v-col cols="2" class="text-right bg-thead thead">
+        <v-col cols="8" lg="4" class="tbody"> 自動化高速藥物篩選研究 </v-col>
+        <v-col cols="4" lg="2" class="text-right bg-thead thead"> <label class="form-label"> 英文計畫名稱 </label></v-col>
+        <v-col cols="8" lg="4" class="tbody"> Research for high throughput screening</v-col>
+        <v-col cols="4" lg="2" class="text-right bg-thead thead">
           <label class="form-label"> <abbr class="necessary" title="為必填(選)欄位,不能為空白。">* </abbr>綱要計畫別 </label></v-col
         >
-        <v-col cols="4" class="tbody"> 綱要計畫別 </v-col>
-        <v-col cols="2" class="text-right bg-thead thead"> <label class="form-label"> 計畫期程 </label></v-col>
-        <v-col cols="4" class="tbody"> 計畫期程 </v-col>
-        <v-col cols="2" class="text-right bg-thead thead">
+        <v-col cols="8" lg="4" class="tbody"> 綱要計畫別 </v-col>
+        <v-col cols="4" lg="2" class="text-right bg-thead thead"> <label class="form-label"> 計畫期程 </label></v-col>
+        <v-col cols="8" lg="4" class="tbody"> 計畫期程 </v-col>
+        <v-col cols="4" lg="2" class="text-right bg-thead thead">
           <label class="form-label"> <abbr class="necessary" title="為必填(選)欄位,不能為空白。">* </abbr>子計畫數量 </label></v-col
         >
-        <v-col cols="4" class="tbody"> 計畫數量 </v-col>
-        <v-col cols="2" class="text-right bg-thead thead"> <label class="form-label" style="font-size: 16px"> 中文計畫內容 </label></v-col>
-        <v-col cols="4" class="tbody">
+        <v-col cols="8" lg="4" class="tbody"> 計畫數量 </v-col>
+        <v-col cols="4" lg="2" class="text-right bg-thead thead"> <label class="form-label" style="font-size: 16px"> 中文計畫內容 </label></v-col>
+        <v-col cols="8" lg="4" class="tbody">
           L技藥研所以任務導向之方式，著重於癌症、糖尿病和心血管疾病等新陳代謝疾病以及病毒感染等相關之藥物及生物技術的研究與發展。\n本所自動化高速藥物篩選核心設施整合了自動化機器手臂的實驗平台、純化合物庫與化學生物整合性系統，透過結合電腦控制之自動化操作方式、高速及高效率活性分析方法和資料庫管理及分析，可在短時間內分析數萬至幾十萬個化合物的生物活性。
         </v-col>
       </v-row>
