@@ -75,6 +75,9 @@
         min-height: 52px;
         height: unset;
       }
+      .dp--menu-wrapper {
+        z-index: 999;
+      }
     }
     .v-field__field {
       height: 40px;
