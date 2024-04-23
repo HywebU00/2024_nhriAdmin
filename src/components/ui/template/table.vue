@@ -22,7 +22,7 @@
             <v-col cols="12" lg="6">
               <v-row class="formGrp">
                 <v-col class="label" cols="12" lg="2">
-                  <label class="" for="">計畫年度</label>
+                  <label class="" for="">計畫 <br />年度 </label>
                 </v-col>
                 <v-col cols="">
                   <v-text-field variant="outlined" hide-details="auto" density="compact"></v-text-field>
@@ -42,7 +42,7 @@
             <v-col cols="12" lg="6">
               <v-row class="formGrp">
                 <v-col class="label" cols="12" lg="2">
-                  <label class="" for="">計畫編號</label>
+                  <label class="" for="">計畫 編號</label>
                 </v-col>
                 <v-col cols="">
                   <v-autocomplete hide-details="auto" variant="outlined" :items="$globalModels.getModel('fakeUnitArray')" density="compact"></v-autocomplete>
@@ -247,6 +247,45 @@
         </tbody>
       </v-table>
       <!-- v-table end -->
+      <br />
+      <!-- v-table start -->
+
+      <v-table class="cellTable overflowVisible">
+        <thead class="bg-thead">
+          <tr>
+            <th class="text-center">程序名稱</th>
+            <th class="text-center">開放時間</th>
+            <th class="text-center">填報提醒時間</th>
+            <th class="text-center" width="350">例外人員</th>
+            <th class="text-center">備註</th>
+          </tr>
+        </thead>
+        <tbody>
+          <template v-for="i in 3" :key="i">
+            <tr class="text-center">
+              <td>計畫研提</td>
+              <td width="285">
+                <!-- 日期範圍區域填選 -->
+                <VueDatePicker class="dateRangerPicker" range :enable-time-picker="false" v-model="rangeDate" select-text="確定" cancel-text="取消"></VueDatePicker>
+              </td>
+              <td width="185">
+                <!-- 日期填選 -->
+                <VueDatePicker class="datePicker" :enable-time-picker="false" select-text="確定" cancel-text="取消" v-model="date"></VueDatePicker>
+              </td>
+              <td class="flex-wrap d-flex align-center flex-lg-nowrap">
+                <v-autocomplete hide-details="auto" variant="outlined" class="mr-0 mr-sm-1 my-1 my-lg-0" :items="$globalModels.getModel('fakeUnitArray')" density="compact"></v-autocomplete>
+                <v-autocomplete hide-details="auto" variant="outlined" class="mr-0 mr-sm-1 my-1 my-lg-0" :items="$globalModels.getModel('fakeUnitArray')" density="compact"></v-autocomplete>
+                <v-btn class="my-1 ml-auto" color="primary">新增</v-btn>
+              </td>
+              <td>
+                <v-text-field variant="outlined" hide-details="auto" density="compact"></v-text-field>
+              </td>
+            </tr>
+          </template>
+        </tbody>
+      </v-table>
+      <!-- v-table end -->
+
       <!-- Pagination start -->
       <div class="text-center mt-6">
         <v-pagination v-model="page" :length="5"></v-pagination>
@@ -300,6 +339,8 @@ export default {
   },
   data() {
     return {
+      date: null,
+      rangeDate: null,
       dialog1: false,
       dialog2: false,
       dialog3: false,

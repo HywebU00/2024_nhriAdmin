@@ -86,9 +86,9 @@
   .v-input {
     background-color: #fff;
   }
-  h4 {
-    margin-left: 6px;
-  }
+  // h4 {
+  //   margin-left: 6px;
+  // }
   .label {
     margin-right: 0;
     label {
@@ -271,5 +271,38 @@
   }
   .v-snackbar--variant-elevated {
     background: #424242d9;
+  }
+}
+
+.datePicker,
+.dateRangerPicker,
+.multiDatePicker {
+  width: 100%;
+  .dp__action_buttons {
+    text-wrap: nowrap;
+  }
+  .dp__input {
+    height: 40px;
+    font-size: 0.9rem;
+    background: rgba(243, 243, 243, 0.7058823529);
+    border-color: rgba(0, 0, 0, 0.3);
+  }
+  .dp__input.dp__input_focus {
+    border-color: #121010;
+    box-shadow: 0 0 0 0.05rem #121010;
+    background: rgba(243, 243, 243, 0.7058823529);
+  }
+  .dp__action_select {
+    color: #fff;
+  }
+  .dp__range_end,
+  .dp__range_start,
+  .dp__active_date {
+    background-color: #247a96;
+  }
+  .dp__action_button {
+    padding: 1em;
+    font-weight: bold;
+    font-size: 14px;
   }
 }

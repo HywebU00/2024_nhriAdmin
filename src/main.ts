@@ -26,6 +26,11 @@ import PanelTitle from '@/components/bootstrap/PanelTitle.vue';
 import PanelFooter from '@/components/bootstrap/PanelFooter.vue';
 import PanelToolbar from '@/components/bootstrap/PanelToolbar.vue';
 
+
+// VueDatePicker 日期選擇器
+import VueDatePicker from '@vuepic/vue-datepicker';
+import '@vuepic/vue-datepicker/dist/main.css'
+
 import VCalendar from 'v-calendar';
 import { Icon } from '@iconify/vue';
 import 'v-calendar/dist/style.css';
@@ -58,6 +63,9 @@ app.component('PanelToolbar', PanelToolbar);
 app.component('PanelTitle', PanelTitle);
 app.component('Icon', Icon);
 // app.use(createPinia());
+
+//日期選擇器
+app.component('VueDatePicker', VueDatePicker);
 
 app.use(pinia);
 app.use(router);
