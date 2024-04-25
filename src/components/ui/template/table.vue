@@ -256,6 +256,7 @@
             <th class="text-center">程序名稱</th>
             <th class="text-center">開放時間</th>
             <th class="text-center">填報提醒時間</th>
+            <th class="text-center">填報提醒時間</th>
             <th class="text-center" width="350">例外人員</th>
             <th class="text-center">備註</th>
           </tr>
@@ -264,22 +265,54 @@
           <template v-for="i in 3" :key="i">
             <tr class="text-center">
               <td>計畫研提</td>
-              <td width="285">
-                <!-- 日期範圍區域填選 -->
-                <VueDatePicker class="dateRangerPicker" range :enable-time-picker="false" v-model="rangeDate" select-text="確定" cancel-text="取消"></VueDatePicker>
+              <td width="160">
+                <v-text-field class="d-block d-lg-flex" variant="outlined" density="compact" hide-details="auto">
+                  <template v-slot:prepend>
+                    <p class="text-no-wrap">每月</p>
+                  </template>
+                  <template v-slot:append>
+                    <p>日</p>
+                  </template>
+                </v-text-field>
+              </td>
+              <td width="380">
+                <div class="d-xl-flex d-block">
+                  <v-text-field class="my-1 d-block d-lg-flex" variant="outlined" density="compact" hide-details="auto">
+                    <template v-slot:prepend>
+                      <p class="text-no-wrap">每季季末</p>
+                    </template>
+                    <template v-slot:append>
+                      <p>日</p>
+                    </template>
+                  </v-text-field>
+                  <v-text-field class="my-1 d-block d-lg-flex" variant="outlined" density="compact" hide-details="auto">
+                    <template v-slot:prepend>
+                      <p class="text-no-wrap">~ 每季季末</p>
+                    </template>
+                    <template v-slot:append>
+                      <p>日</p>
+                    </template>
+                  </v-text-field>
+                </div>
               </td>
               <td width="185">
                 <!-- 日期填選 -->
                 <VueDatePicker class="datePicker" :enable-time-picker="false" select-text="確定" cancel-text="取消" v-model="date"></VueDatePicker>
               </td>
-              <td class="flex-wrap d-flex align-center flex-lg-nowrap">
-                <v-autocomplete hide-details="auto" variant="outlined" class="mr-0 mr-sm-1 my-1 my-lg-0" :items="$globalModels.getModel('fakeUnitArray')" density="compact"></v-autocomplete>
-                <v-autocomplete hide-details="auto" variant="outlined" class="mr-0 mr-sm-1 my-1 my-lg-0" :items="$globalModels.getModel('fakeUnitArray')" density="compact"></v-autocomplete>
-                <v-btn class="my-1 ml-auto" color="primary">新增</v-btn>
+              <td>
+                <div class="flex-wrap d-flex align-center flex-xl-nowrap">
+                  <v-autocomplete hide-details="auto" variant="outlined" class="mr-0 mr-sm-1 my-1 my-xl-0" :items="$globalModels.getModel('fakeUnitArray')" density="compact"></v-autocomplete>
+                  <v-autocomplete hide-details="auto" variant="outlined" class="mr-0 mr-sm-1 my-1 my-xl-0" :items="$globalModels.getModel('fakeUnitArray')" density="compact"></v-autocomplete>
+                  <v-btn class="my-1 ml-auto" color="primary">新增</v-btn>
+                </div>
               </td>
               <td>
                 <v-text-field variant="outlined" hide-details="auto" density="compact"></v-text-field>
               </td>
+              <!-- 日期範圍區域填選 -->
+              <!-- <td width="285">
+                <VueDatePicker class="dateRangerPicker" range :enable-time-picker="false" v-model="rangeDate" select-text="確定" cancel-text="取消"></VueDatePicker>
+              </td> -->
             </tr>
           </template>
         </tbody>

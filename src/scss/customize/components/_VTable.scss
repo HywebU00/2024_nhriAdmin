@@ -9,3 +9,14 @@
 .v-messages__message {
   font-size: 0.75rem;
 }
+.v-input--horizontal {
+  .v-input__prepend {
+    margin-inline-end: 6px;
+  }
+  .v-input__append {
+    margin-inline-start: 6px;
+  }
+}
+.v-field__input {
+  padding: 8px;
+}
