@@ -82,6 +82,15 @@
     .v-field__field {
       height: 40px;
     }
+    .v-textarea {
+      margin: 0.5em 0;
+      .v-field__input {
+        mask-image: none;
+      }
+      .v-field__field {
+        height: unset;
+      }
+    }
   }
   thead {
     text-wrap: nowrap;

@@ -249,7 +249,6 @@
       <!-- v-table end -->
       <br />
       <!-- v-table start -->
-
       <v-table class="cellTable overflowVisible">
         <thead class="bg-thead">
           <tr>
@@ -257,7 +256,7 @@
             <th class="text-center">開放時間</th>
             <th class="text-center">填報提醒時間</th>
             <th class="text-center">填報提醒時間</th>
-            <th class="text-center" width="350">例外人員</th>
+            <th class="text-center">例外人員</th>
             <th class="text-center">備註</th>
           </tr>
         </thead>
@@ -307,7 +306,7 @@
                 </div>
               </td>
               <td>
-                <v-text-field variant="outlined" hide-details="auto" density="compact"></v-text-field>
+                <v-textarea variant="outlined" hide-details="auto"></v-textarea>
               </td>
               <!-- 日期範圍區域填選 -->
               <!-- <td width="285">
