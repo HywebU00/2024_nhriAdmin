@@ -51,6 +51,9 @@ import VueAxios from 'vue-axios'
 
 // import { useAppSidebarMenuStore } from '@/pinia/app-sidebar-menu';
 // import { Icon } from '@iconify/vue';
+import VueUploadComponent from 'vue-upload-component';
+
+
 
 const emitter = mitt();
 const app = createApp(App);
@@ -63,7 +66,7 @@ app.component('PanelToolbar', PanelToolbar);
 app.component('PanelTitle', PanelTitle);
 app.component('Icon', Icon);
 // app.use(createPinia());
-
+app.component('file-upload', VueUploadComponent);
 //日期選擇器
 app.component('VueDatePicker', VueDatePicker);
 

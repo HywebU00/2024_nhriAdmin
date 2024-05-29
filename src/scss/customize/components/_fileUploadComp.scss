@@ -1,0 +1,25 @@
+.fileUploadComp {
+  .file-uploads label {
+    cursor: pointer;
+  }
+  .progress {
+    margin-bottom: 0.25rem;
+  }
+  .v-btn {
+    font-size: 16px;
+    line-height: 36px;
+    height: 36px;
+    padding: 0 16px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    cursor: pointer;
+  }
+}
+.fileUpList {
+  .v-list-item-title {
+    padding: 0.3rem 0.5rem;
+    &:hover {
+      background-color: #eee;
+      cursor: pointer;
+    }
+  }
+}

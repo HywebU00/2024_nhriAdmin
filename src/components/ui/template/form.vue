@@ -388,13 +388,27 @@
       </v-row>
     </panel-body>
   </panel>
+  <!-- 文字編輯套件 -->
+  <panel>
+    <panel-header>
+      <panel-title>文字編輯套件</panel-title>
+      <panel-toolbar />
+    </panel-header>
+    <panel-body> </panel-body>
+  </panel>
 </template>
 
 <script>
 export default {
-  data: () => ({
-    visible: false,
-  }),
+  // data: () => ({
+  //   visible: false,
+
+  // }),
+  data() {
+    return {
+      visible: false,
+    };
+  },
 };
 </script>
 
