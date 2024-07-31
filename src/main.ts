@@ -3,7 +3,7 @@ import { createApp } from 'vue';
 // import { createPinia } from 'pinia';
 import { pinia } from './pinia';
 import { Vue3ProgressPlugin } from '@marcoschulte/vue3-progress';
-import PerfectScrollbar from 'vue3-perfect-scrollbar';
+import {PerfectScrollbar} from 'vue3-perfect-scrollbar';
 import mitt from 'mitt';
 import 'vue3-perfect-scrollbar/dist/vue3-perfect-scrollbar.css';
 import '@marcoschulte/vue3-progress/dist/index.css';
@@ -28,8 +28,8 @@ import PanelToolbar from '@/components/bootstrap/PanelToolbar.vue';
 
 
 // VueDatePicker 日期選擇器
-import VueDatePicker from '@vuepic/vue-datepicker';
-import '@vuepic/vue-datepicker/dist/main.css'
+// import VueDatePicker from '@vuepic/vue-datepicker';
+// import '@vuepic/vue-datepicker/dist/main.css'
 
 import VCalendar from 'v-calendar';
 import { Icon } from '@iconify/vue';
@@ -68,7 +68,7 @@ app.component('Icon', Icon);
 // app.use(createPinia());
 app.component('file-upload', VueUploadComponent);
 //日期選擇器
-app.component('VueDatePicker', VueDatePicker);
+// app.component('VueDatePicker', VueDatePicker);
 
 app.use(pinia);
 app.use(router);
@@ -78,7 +78,6 @@ app.use(VCalendar);
 app.use(vuetify);
 app.use(VueAxios, axios);
 app.use(Icon);
-
 // const appSidebarMenu = useAppSidebarMenuStore();
 //utils
 import { globalFunctions } from './utils/globalFunctions';
