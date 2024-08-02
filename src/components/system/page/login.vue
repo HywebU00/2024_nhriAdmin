@@ -47,10 +47,9 @@ export default {
       <div class="login-header">
         <div class="brand mb-sm-0 mb-3">
           <div class="d-flex align-items-center">
-            <img src="~@/assets/logo.png" />
-            <h1>管理端<span>登入</span></h1>
+            <img src="~@/assets/nhrilogo.gif" />
+            <h1>國家衛生研究院<br /><span>計畫管理系統</span></h1>
           </div>
-          <small>財團法人國家衛生研究院 (NHRI) ::計畫管理系統::</small>
         </div>
         <div class="icon">
           <i class="fa fa-lock"></i>
