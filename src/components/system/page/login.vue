@@ -47,7 +47,7 @@ export default {
       <div class="login-header">
         <div class="brand mb-sm-0 mb-3">
           <div class="d-flex align-items-center">
-            <img src="~@/assets/nhrilogo.gif" />
+            <img src="~@/assets/nhrilogo.png" />
             <h1>國家衛生研究院<br /><span>計畫管理系統</span></h1>
           </div>
         </div>
