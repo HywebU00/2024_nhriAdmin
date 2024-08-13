@@ -8,6 +8,9 @@ const appApiData = useAppApiDataStore();
 export default {
   data: () => ({
     visible: false,
+    selectItem: false,
+    select: { state: '請選取項目', props: { disabled: true } },
+    items: [{ state: '選項一' }, { state: '選項二' }, { state: '選項三' }, { state: '選項四' }],
   }),
   mounted() {
     appOption.appSidebarHide = true;
@@ -65,10 +68,16 @@ export default {
             <v-container class="px-0">
               <div class="loginForm">
                 <div class="">
-                  <v-text-field label="帳號"></v-text-field>
+                  <v-text-field placeholder="帳號"></v-text-field>
                 </div>
-                <div class="">
-                  <v-text-field label="密碼表單" :append-inner-icon="visible ? 'fa-solid fa-eye' : 'fa-solid fa-eye-slash'" :type="visible ? 'text' : 'password'" @click:append-inner="visible = !visible" hide-details="auto"></v-text-field>
+                <div class="mb-4">
+                  <v-text-field placeholder="密碼表單" :append-inner-icon="visible ? 'fa-solid fa-eye' : 'fa-solid fa-eye-slash'" :type="visible ? 'text' : 'password'" @click:append-inner="visible = !visible" hide-details="auto"></v-text-field>
+                </div>
+                <div class="mb-4">
+                  <v-select v-model="select" :items="items" item-title="state" item-disabled="disabled" hide-details="auto"> </v-select>
+                </div>
+                <div class="" v-if="select.state != '請選取項目'">
+                  <v-text-field placeholder="MOTP" hide-details="auto"></v-text-field>
                 </div>
                 <v-checkbox color="primary" class="py-0" label="記住我的登入帳號 (公用電腦請勿勾選)"></v-checkbox>
               </div>
