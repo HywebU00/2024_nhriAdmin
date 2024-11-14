@@ -1,10 +1,15 @@
 .tableInfo {
-  margin: 0 1rem 2rem 1rem;
+  margin: 0 1rem 2rem 1rem !important;
   .thead {
     padding: 12px 1rem;
     align-items: center;
     display: flex;
     justify-content: flex-end;
+    background-color: #124f89 !important;
+    color: #fff;
+  }
+  .form-label {
+    color: #fff;
   }
   .tbody {
     display: flex;
@@ -14,7 +19,12 @@
 .planInfo {
   margin: 0 1rem 2rem 1rem;
   .thead {
+    background-color: #124f89 !important;
+    color: #fff;
     padding: 12px 1rem;
+    .form-label {
+      color: #fff;
+    }
   }
 }
 .dataTable {
@@ -30,7 +40,9 @@
   }
   thead {
     text-wrap: nowrap;
-    background-color: #e3e3e3;
+    // background-color: #e3e3e3;
+    background-color: #124f89;
+    color: #fff;
     // background-color: mix(#00acac, #fff, 10%);
     th {
       text-wrap: nowrap;
@@ -55,7 +67,7 @@
           cursor: pointer;
           font-size: 20px;
           &:hover {
-            color: #00acac; //#348fe2;
+            color: #0096c7; //#00acac; //#348fe2;
           }
         }
       }
@@ -94,7 +106,9 @@
   }
   thead {
     text-wrap: nowrap;
-    background-color: #e3e3e3;
+    // background-color: #e3e3e3;
+    background-color: #124f89 !important;
+    color: #fff !important;
     th {
       white-space: nowrap;
     }

@@ -62,13 +62,13 @@
           </v-row>
         </v-container>
         <div class="d-flex justify-center my-3">
-          <v-btn class="bg-primary px-5 mx-2">搜尋</v-btn>
+          <v-btn class="bg-primary px-5 mx-2" @click="scrollToSearch">搜尋</v-btn>
           <v-btn class="bg-gray px-4 mx-2">新增項目</v-btn>
         </div>
       </v-form>
     </panel-body>
   </panel>
-  <panel>
+  <panel id="searchContent">
     <panel-header>
       <panel-title>查詢結果 </panel-title>
       <panel-toolbar />
@@ -361,6 +361,7 @@ import internalAdminPlanEditComp from '@/components/system/internalAdminPlan/int
 import planCertifyHistoryTableComp from '@/components/system/internalAdminPlan/planView/planCertifyHistoryTableComp.vue';
 
 import { useAppSidebarMenuStore } from '@/pinia/app-sidebar-menu';
+
 const appSidebarMenu = useAppSidebarMenuStore();
 const vm = this;
 export default {
@@ -434,6 +435,14 @@ export default {
     };
   },
   methods: {
+    scrollToSearch() {
+      // console.log($refs);
+      const goToTop = document.getElementById('searchContent');
+      goToTop.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // console.log(this.$refs.searchContent.target);
+      //window.scrollTo(0, 600);
+      // this.$refs.searchContent.target.scrollIntoView();
+    },
     parentDialog() {
       this.dialog1 = false;
       this.dialog2 = false;

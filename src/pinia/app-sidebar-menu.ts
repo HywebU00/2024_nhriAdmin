@@ -8,11 +8,54 @@ export const useAppSidebarMenuStore = defineStore({
 				text: 'Navigation',
 				is_header: true
 			},
-			{
-				url: '/', icon: 'fa fa-sitemap', title: 'Home',
+				{
+				url: '/', icon: 'fa fa-sitemap', title: '單位規劃',
 				children: [
-					{ url: '/t01', icon: 'fa fa-file', title: '測試頁01' },
+					{ url: '/t01', title: '測試頁01' ,icon:'fas fa-pen'},
 
+				]
+			},
+	
+			{
+				url: '/', icon: 'fa fa-sitemap', title: '單位規劃',
+				children: [
+					{ url: '/t01',  title: '測試頁01' },
+
+				]
+			},
+				{
+				url: '/',  icon: 'fa fa-sitemap',title: '單位規劃',
+				children: [
+					{ url: '/t01',title: '測試頁01' },
+
+				]
+			},
+			// {
+			// 	url: '/', icon: 'fa fa-angle-double-right', title: '單位規劃',
+			// 	children: [
+			// 		{ url: '/t01', icon: 'fas fa-pen', title: '測試頁01' },
+
+			// 	]
+			// },
+	
+			// {
+			// 	url: '/', icon: 'fa fa-angle-double-right', title: '單位規劃',
+			// 	children: [
+			// 		{ url: '/t01', icon: 'fas fa-pen', title: '測試頁01' },
+
+			// 	]
+			// },
+			// 	{
+			// 	url: '/', icon: 'fa fa-angle-double-right', title: '單位規劃',
+			// 	children: [
+			// 		{ url: '/t01', icon: 'fas fa-pen', title: '測試頁01' },
+
+			// 	]
+			// },
+				{
+				url: '/',  title: '單位規劃',
+				children: [
+					{ url: '/t01', title: '測試頁01' },
 				]
 			},
 			],
@@ -48,7 +91,7 @@ export const useAppSidebarMenuStore = defineStore({
 			},
 	uiTemplate:
 			{
-				url: '/ui/template/', icon: 'fa fa-star', title: 'UI模板',
+				url: '/ui/template/', icon: 'fa fa-wrench', title: 'UI模板',
 				children: [
 					{ url: '/ui/template/tree', icon: 'fa fa-file', title: '樹狀模板' },	
 					{ url: '/ui/template/form', icon: 'fa fa-file', title: '表單模板' },	
