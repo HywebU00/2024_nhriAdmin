@@ -87,9 +87,6 @@
   .v-input {
     background-color: #fff;
   }
-  // h4 {
-  //   margin-left: 6px;
-  // }
   .label {
     margin-right: 0;
     label {
@@ -164,10 +161,10 @@
       height: 60px;
       bottom: 0;
       width: 100%;
-      background: linear-gradient(to bottom, rgba(45, 53, 60, 0) 0%, rgba(45, 53, 60, 0.51) 54%, rgba(45, 53, 60, 0.65) 96%, rgba(45, 53, 60, 0.65) 100%);
+      // background: linear-gradient(to bottom, rgba(45, 53, 60, 0) 0%, rgba(45, 53, 60, 0.51) 54%, rgba(45, 53, 60, 0.65) 96%, rgba(45, 53, 60, 0.65) 100%);
     }
   }
-  background: linear-gradient(to bottom, #20599b6b 0%, #09091157 100%);
+  background: linear-gradient(to bottom, #6ba9df 0%, #163466 100%);
 }
 
 .app-sidebar-minified {
@@ -203,6 +200,9 @@
     }
   }
 }
+body {
+  background: #eff0f6;
+}
 .loginPage {
   .login-header {
     img {
@@ -223,6 +223,7 @@
   }
   .loginBtn {
     font-weight: bold;
+    background-color: #142b5e !important;
   }
 }
 .login.login-v1 {
@@ -252,6 +253,11 @@
     border-radius: 0.25rem;
     .v-field__outline {
       display: none;
+    }
+  }
+  .v-selection-control__wrapper {
+    &.text-primary {
+      color: #163557 !important;
     }
   }
   .v-selection-control {
@@ -307,7 +313,10 @@
 }
 .panel.panel-inverse {
   > .panel-heading {
-    background: #041728;
+    background: #5e85b3;
+    .btn-success {
+      background: #173751;
+    }
   }
 }
 .datePicker,
@@ -352,4 +361,32 @@
 .app-sidebar .menu .menu-item .menu-link .menu-text {
   font-weight: bold;
   color: #fff;
+}
+
+.app-header .navbar-nav .navbar-item .navbar-link .badge {
+  background: #ff5b57 !important;
+}
+.app-sidebar .menu .menu-item .menu-submenu .menu-item.active:after {
+  border-color: #00ffee !important;
+}
+// .bg-gray {
+//   &.v-btn {
+//     background-color: rgb(109 67 67) !important;
+//   }
+// }
+.app-sidebar .menu .menu-profile .menu-profile-cover.with-shadow:before {
+  background: rgb(33 63 136 / 75%);
+}
+.app-sidebar .menu .menu-item.active > .menu-link {
+  background: #142b5e;
+}
+.app-sidebar .app-sidebar-minify-btn {
+  background: #142b5e;
+}
+
+.app-sidebar .menu .menu-item .menu-submenu .menu-item .menu-link:after {
+  background: #ffffff3e;
+}
+.app-sidebar .menu .menu-item .menu-submenu .menu-item:before {
+  background: #ffffff3e;
 }

@@ -22,7 +22,7 @@
             <v-col cols="12" lg="6">
               <v-row class="formGrp">
                 <v-col class="label" cols="12" lg="2">
-                  <label class="" for="">計畫 <br />年度 </label>
+                  <label class="" for="">計畫年度 </label>
                 </v-col>
                 <v-col cols="">
                   <v-text-field variant="outlined" hide-details="auto" density="compact"></v-text-field>
@@ -42,7 +42,7 @@
             <v-col cols="12" lg="6">
               <v-row class="formGrp">
                 <v-col class="label" cols="12" lg="2">
-                  <label class="" for="">計畫 編號</label>
+                  <label class="" for="">計畫編號</label>
                 </v-col>
                 <v-col cols="">
                   <v-autocomplete hide-details="auto" variant="outlined" :items="$globalModels.getModel('fakeUnitArray')" density="compact"></v-autocomplete>
@@ -436,12 +436,8 @@ export default {
   },
   methods: {
     scrollToSearch() {
-      // console.log($refs);
       const goToTop = document.getElementById('searchContent');
       goToTop.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      // console.log(this.$refs.searchContent.target);
-      //window.scrollTo(0, 600);
-      // this.$refs.searchContent.target.scrollIntoView();
     },
     parentDialog() {
       this.dialog1 = false;

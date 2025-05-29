@@ -9,49 +9,28 @@ export const useAppSidebarMenuStore = defineStore({
 				is_header: true
 			},
 				{
-				url: '/', icon: 'fa fa-sitemap', title: '單位規劃',
+				url: '/', title: '單位規劃',
 				children: [
-					{ url: '/t01', title: '測試頁01' ,icon:'fas fa-pen'},
+					{ url: '/t01', title: '測試頁01' },
 
 				]
 			},
 	
 			{
-				url: '/', icon: 'fa fa-sitemap', title: '單位規劃',
+				url: '/',title: '單位規劃',
 				children: [
 					{ url: '/t01',  title: '測試頁01' },
 
 				]
 			},
 				{
-				url: '/',  icon: 'fa fa-sitemap',title: '單位規劃',
+				url: '/',title: '單位規劃',
 				children: [
 					{ url: '/t01',title: '測試頁01' },
 
 				]
 			},
-			// {
-			// 	url: '/', icon: 'fa fa-angle-double-right', title: '單位規劃',
-			// 	children: [
-			// 		{ url: '/t01', icon: 'fas fa-pen', title: '測試頁01' },
-
-			// 	]
-			// },
-	
-			// {
-			// 	url: '/', icon: 'fa fa-angle-double-right', title: '單位規劃',
-			// 	children: [
-			// 		{ url: '/t01', icon: 'fas fa-pen', title: '測試頁01' },
-
-			// 	]
-			// },
-			// 	{
-			// 	url: '/', icon: 'fa fa-angle-double-right', title: '單位規劃',
-			// 	children: [
-			// 		{ url: '/t01', icon: 'fas fa-pen', title: '測試頁01' },
-
-			// 	]
-			// },
+			
 				{
 				url: '/',  title: '單位規劃',
 				children: [
@@ -60,43 +39,43 @@ export const useAppSidebarMenuStore = defineStore({
 			},
 			],
 			menuSysInternalAdminPlan: {
-				url: '/system/internalAdminPlan/', icon: 'fa fa-sitemap', title: '院內行政計畫',
+				url: '/system/internalAdminPlan/', title: '院內行政計畫',
 				children: [
-					{ url: '/system/internalAdminPlan/overview', icon: 'fa fa-file', title: '計畫總覽' },
-					{ url: '/system/internalAdminPlan/proposal', icon: 'fa fa-file', title: '計畫研提' },
-					{ url: '/system/planFund/fundCertify1', icon: 'fa fa-file', title: '期初經費設定' },
-					{ url: '/system/internalAdminPlan/manageSetup', icon: 'fa fa-file', title: '管考項目設定' },
-					{ url: '/system/internalAdminPlan/manage', icon: 'fa fa-file', title: '計畫執行與管考' },
-					{ url: '/system/internalAdminPlan/change', icon: 'fa fa-file', title: '計畫變更' },
-					{ url: '/system/internalAdminPlan/close', icon: 'fa fa-file', title: '計畫結案管理' },
-					{ url: '/system/internalAdminPlan/certifyCollector', icon: 'fa fa-file', title: '單位彙整' },
-					{ url: '/system/internalAdminPlan/certifyDeptChief', icon: 'fa fa-file', title: '主管簽核' },
-					{ url: '/system/internalAdminPlan/certifyDeptChief2', icon: 'fa fa-file', title: '主管簽核(所/處)' },
-					{ url: '/system/internalAdminPlan/certifyAcademic', icon: 'fa fa-file', title: '學發處彙整' },
+					{ url: '/system/internalAdminPlan/overview',  title: '計畫總覽' },
+					{ url: '/system/internalAdminPlan/proposal',  title: '計畫研提' },
+					{ url: '/system/planFund/fundCertify1',  title: '期初經費設定' },
+					{ url: '/system/internalAdminPlan/manageSetup', title: '管考項目設定' },
+					{ url: '/system/internalAdminPlan/manage',  title: '計畫執行與管考' },
+					{ url: '/system/internalAdminPlan/change',  title: '計畫變更' },
+					{ url: '/system/internalAdminPlan/close',  title: '計畫結案管理' },
+					{ url: '/system/internalAdminPlan/certifyCollector', title: '單位彙整' },
+					{ url: '/system/internalAdminPlan/certifyDeptChief', title: '主管簽核' },
+					{ url: '/system/internalAdminPlan/certifyDeptChief2', title: '主管簽核(所/處)' },
+					{ url: '/system/internalAdminPlan/certifyAcademic', title: '學發處彙整' },
 				]
 			},
 			menuSysManage:
 			{
-				url: '/system/manage/', icon: 'fa fa-sitemap', title: '系統設置',
+				url: '/system/manage/',  title: '系統設置',
 				children: [
-					{ url: '/system/manage/dept', icon: 'fa fa-file', title: 'Unit (單位組織)' },
-					{ url: '/system/manage/authRole', icon: 'fa fa-file', title: 'Role (角色權限)' },
-					{ url: '/system/manage/account', icon: 'fa fa-file', title: 'Account (帳號管理)' },
-					{ url: '/system/manage/code', icon: 'fa fa-file', title: 'Code (系統代碼)' },
+					{ url: '/system/manage/dept',  title: 'Unit (單位組織)' },
+					{ url: '/system/manage/authRole', title: 'Role (角色權限)' },
+					{ url: '/system/manage/account', title: 'Account (帳號管理)' },
+					{ url: '/system/manage/code',  title: 'Code (系統代碼)' },
 					{
-						url: '/system/manage/parameter', icon: 'fa fa-file', title: 'Parameter (系統參數)'
+						url: '/system/manage/parameter',  title: 'Parameter (系統參數)'
 					},
-					{ url: '/system/manage/application', icon: 'fa fa-file', title: 'Application(系統功能)' },
+					{ url: '/system/manage/application',  title: 'Application(系統功能)' },
 				]
 			},
-	uiTemplate:
+	    uiTemplate:
 			{
-				url: '/ui/template/', icon: 'fa fa-wrench', title: 'UI模板',
+				url: '/ui/template/', title: 'UI模板',
 				children: [
-					{ url: '/ui/template/tree', icon: 'fa fa-file', title: '樹狀模板' },	
-					{ url: '/ui/template/form', icon: 'fa fa-file', title: '表單模板' },	
-					{ url: '/ui/template/table', icon: 'fa fa-file', title: '列表模板' },	
-					{ url: '/ui/components/component', icon: 'fa fa-file', title: '元件列表' },	
+					{ url: '/ui/template/tree',  title: '樹狀模板' },	
+					{ url: '/ui/template/form',  title: '表單模板' },	
+					{ url: '/ui/template/table', title: '列表模板' },	
+					{ url: '/ui/components/component',  title: '元件列表' },	
 				]
 			},
 		}

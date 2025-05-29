@@ -5,11 +5,14 @@
     align-items: center;
     display: flex;
     justify-content: flex-end;
-    background-color: #124f89 !important;
+    background-color: #e8edf1 !important;
     color: #fff;
+    color: #333;
   }
   .form-label {
     color: #fff;
+    //0514 配色參考
+    color: #333 !important;
   }
   .tbody {
     display: flex;
@@ -19,11 +22,13 @@
 .planInfo {
   margin: 0 1rem 2rem 1rem;
   .thead {
-    background-color: #124f89 !important;
+    background-color: #e8edf1 !important;
     color: #fff;
     padding: 12px 1rem;
     .form-label {
       color: #fff;
+      //0514 配色參考
+      color: #333 !important;
     }
   }
 }
@@ -40,10 +45,9 @@
   }
   thead {
     text-wrap: nowrap;
-    // background-color: #e3e3e3;
-    background-color: #124f89;
     color: #fff;
-    // background-color: mix(#00acac, #fff, 10%);
+    background-color: #c7d0d8 !important;
+    color: #333;
     th {
       text-wrap: nowrap;
       white-space: nowrap;
@@ -67,7 +71,7 @@
           cursor: pointer;
           font-size: 20px;
           &:hover {
-            color: #0096c7; //#00acac; //#348fe2;
+            color: #0096c7;
           }
         }
       }
@@ -106,9 +110,8 @@
   }
   thead {
     text-wrap: nowrap;
-    // background-color: #e3e3e3;
-    background-color: #124f89 !important;
-    color: #fff !important;
+    background-color: #c7d0d8 !important;
+    color: #333 !important;
     th {
       white-space: nowrap;
     }
@@ -122,7 +125,7 @@
     }
   }
   &.v-table .v-table__wrapper > table tbody tr:not(:last-child) td {
-    border-bottom: 1px solid lighten(#695f5f, 50) !important;
+    border-bottom: 1px solid lighten(#5f6269, 50) !important;
   }
   tr {
     .btnGroup {
@@ -130,12 +133,12 @@
     }
     td {
       &:last-child {
-        border-right: 1px solid lighten(#695f5f, 50);
+        border-right: 1px solid lighten(#5f6269, 50);
       }
     }
   }
   td {
-    border: 1px solid lighten(#695f5f, 50);
+    border: 1px solid lighten(#5f6269, 50);
     border-right: 0px;
     ul {
       padding: 0.5rem;
